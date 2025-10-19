@@ -27,7 +27,7 @@ KICKPI-K2B is a development board based on the Allwinner H618 main control chip,
 - **USB OTG**: USB 2.0 OTG X1
 
 ### I/O Interfaces
-- **GPIO**: [Add GPIO pin count and details]
+- **GPIO**: GPIO X20 [I/O Dependant]
 - **UART**: UART X2
 - **SPI**: SPI X1
 - **I2C**: I2C X4
