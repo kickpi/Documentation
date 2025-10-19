@@ -1,3 +1,5 @@
+![Kickpi Community](https://www.kickpi.com/wp-content/uploads/2024/10/kickpi.png)
+
 # Contributing to KickPi Documentation
 
 Thank you for your interest in improving the KickPi open-source ecosystem!
