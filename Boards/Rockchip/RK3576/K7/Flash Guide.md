@@ -56,10 +56,16 @@ The KickPi K7 supports the following operating systems:
 
 1. **Download and install** [Balena Etcher](https://www.balena.io/etcher/)
 2. **Launch** Balena Etcher
+
+![Balena Etcher Interface](images/balenaetcher_interface.png)
+
 3. **Click** "Flash from file" and select your downloaded image file
 4. **Click** "Select target" and choose your SD card
 5. **Click** "Flash!" to start the flashing process
 6. **Wait** for the process to complete (typically 15-45 minutes)
+
+![Flashing Progress](images/balenaetcher_progress.png)
+
 7. **Safely eject** the SD card when done
 
 ### Using Rufus (Windows Alternative)
@@ -136,6 +142,34 @@ The KickPi K7 supports the following operating systems:
 - **MIPI DSI**: X2 (up to 1920x1080@60Hz each)
 - **LVDS**: Up to 1920x1080@60Hz
 - **EDP**: Up to 2560x1600@60Hz
+
+## Troubleshooting
+
+### Alternative: USB Cable Flashing
+
+If SD card flashing fails, you can use USB cable flashing as an alternative method:
+
+#### Install USB Driver
+
+![USB Driver Installation](images/usb_driver_install.png)
+
+#### RKDevTool Setup
+
+![RKDevTool Interface](images/rkdevtool_interface.png)
+
+#### Device Recognition in MASKROM Mode
+
+![Device Recognition](images/device_recognition.png)
+
+#### Firmware Selection and Flashing
+
+![Firmware Selection](images/firmware_selection.png)
+
+![Flashing Progress](images/flashing_progress.png)
+
+![Flashing Complete](images/flashing_complete.png)
+
+For detailed USB flashing instructions, refer to the official Rockchip documentation.
 
 ## Support Resources
 

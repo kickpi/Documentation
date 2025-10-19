@@ -54,10 +54,16 @@ The KickPi K4B supports the following operating systems:
 
 1. **Download and install** [Balena Etcher](https://www.balena.io/etcher/)
 2. **Launch** Balena Etcher
+
+![Balena Etcher Interface](images/balenaetcher_interface.png)
+
 3. **Click** "Flash from file" and select your downloaded image file
 4. **Click** "Select target" and choose your SD card
 5. **Click** "Flash!" to start the flashing process
-6. **Wait** for the process to complete (typically 10-30 minutes)
+6. **Wait** for the process to complete (typically 8-20 minutes)
+
+![Flashing Progress](images/balenaetcher_progress.png)
+
 7. **Safely eject** the SD card when done
 
 ### Using Rufus (Windows Alternative)
@@ -166,6 +172,36 @@ The KickPi K4B supports the following operating systems:
 - **HDMI**: Up to 4K@60Hz
 - **MIPI DSI**: Up to 1920x1080@60Hz
 - **LVDS**: Up to 1920x1080@60Hz
+
+## Alternative Android Flashing Method
+
+### Using PhoenixCard (For Android Images)
+
+PhoenixCard is specifically designed for Allwinner Android images and offers additional features:
+
+![PhoenixCard Interface](images/phoenixcard_interface.png)
+
+#### Start up Card (Boot from SD Card)
+
+![Start up Card Steps](images/startup_card_steps.png)
+
+#### ProductCard (Install to eMMC)
+
+![ProductCard Steps](images/productcard_steps.png)
+
+### Advanced Ubuntu Installation
+
+For Ubuntu systems, you can copy the installation from SD card to eMMC for better performance:
+
+![Ubuntu Copy to eMMC Process](images/ubuntu_copy_emmc_1.png)
+
+![Ubuntu Copy Progress](images/ubuntu_copy_emmc_2.png)
+
+After successful completion:
+
+![Ubuntu Copy Complete](images/ubuntu_copy_complete_1.png)
+
+![Ubuntu Installation Complete](images/ubuntu_copy_complete_2.png)
 
 ## Support Resources
 
