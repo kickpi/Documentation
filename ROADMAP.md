@@ -1,3 +1,5 @@
+![Kickpi Roadmap](https://www.kickpi.com/wp-content/uploads/2024/11/about-us-kickpi.png)
+
 # KickPi Documentation Roadmap
 
 This roadmap outlines the development goals for the KickPi community documentation platform.  
