@@ -1,6 +1,6 @@
 # KickPi K3 Development Board
 
-![KickPi K3](https://via.placeholder.com/800x400/F44336/FFFFFF?text=KickPi+K3+Board+Image)
+![KickPi K3](images/K3.png)
 
 ## Overview
 

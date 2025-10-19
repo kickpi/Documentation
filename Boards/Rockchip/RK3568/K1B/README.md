@@ -1,6 +1,6 @@
 # KickPi K1B Development Board
 
-![KickPi K1B](https://via.placeholder.com/800x400/00BCD4/FFFFFF?text=KickPi+K1B+Board+Image)
+![KickPi K1B](images/K1B.png)
 
 ## Overview
 

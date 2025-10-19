@@ -1,6 +1,6 @@
 # KickPi K4B Development Board
 
-![KickPi K4B](https://via.placeholder.com/800x400/9C27B0/FFFFFF?text=KickPi+K4B+Board+Image)
+![KickPi K4B](images/K4B.png)
 
 ## Overview
 

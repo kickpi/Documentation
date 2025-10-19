@@ -1,6 +1,6 @@
 # KickPi K8 Development Board
 
-![KickPi K8](https://via.placeholder.com/800x400/607D8B/FFFFFF?text=KickPi+K8+Board+Image)
+![KickPi K8](images/K8.png)
 
 ## Overview
 

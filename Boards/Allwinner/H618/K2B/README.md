@@ -1,6 +1,6 @@
 # KickPi K2B Development Board
 
-![KickPi K2B](https://via.placeholder.com/800x400/2196F3/FFFFFF?text=KickPi+K2B+Board+Image)
+![KickPi K2B](images/K2B.png)
 
 ## Overview
 

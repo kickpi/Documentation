@@ -1,6 +1,6 @@
 # KickPi K7 Development Board
 
-![KickPi K7](https://via.placeholder.com/800x400/795548/FFFFFF?text=KickPi+K7+Board+Image)
+![KickPi K7](images/K7.png)
 
 ## Overview
 

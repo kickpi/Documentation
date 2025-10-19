@@ -1,6 +1,6 @@
 # KickPi K2C Development Board
 
-![KickPi K2C](https://via.placeholder.com/800x400/FF9800/FFFFFF?text=KickPi+K2C+Board+Image)
+![KickPi K2C](images/K2C.png)
 
 ## Overview
 
