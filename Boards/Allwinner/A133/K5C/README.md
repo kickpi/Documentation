@@ -17,7 +17,7 @@
 ### Memory & Storage
 - **Memory**: 2GB
 - **Storage**: 8GB
-- **Expandable Storage**: MicroSD Card Support
+- **Expandable Storage**: MicroSD/eMMC
 
 ### Connectivity
 - **Wi-Fi**: ( AW869A )
