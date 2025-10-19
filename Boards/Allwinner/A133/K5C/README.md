@@ -42,14 +42,22 @@
 - **FEL KEY**
 
 ### Display & Audio
-- **Display Interface**: [Add display connector details]
-- **Audio**: [Add audio input/output specifications]
+- **Display Interface**
+    1. **MIPI DSI Display**
+        1. X1 ( up to 1920*1080 @ 60Hz)
+    2. **LVDS Display**
+        1. Single link X 1( up to 1366*768 @60Hz )
+        2. * Dual-link X 1(up to 1920 x 1080 @60fps)
+- **Audio**: X2 Headers X1 Headphone Jack
 - **Camera**: MIPI CSI Camera ( 4 Lane X 1 or 2 Lane X 2 ) X 2
 
 ### Power
 - **Power Supply**: DC 12V
 - **Power Consumption**: TBA
 - **Battery Support**: Onboard Header
+
+### Hardware interface
+![K5C](images/Hardware%20interface.png)
 
 ## Getting Started
 
