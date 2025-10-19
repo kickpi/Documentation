@@ -4,48 +4,71 @@
 
 ## Overview
 
-The KickPi K2C is a development board based on the Allwinner H618 processor, designed for IoT applications, smart home solutions, and embedded development projects.
+KICKPI-K2C is a development board based on the Allwinner H618 main control chip, with a quad-core 64-bit Cortex-A53 processor, main frequency up to 2.0GHz, low power consumption, and high performance. Equipped with a Gigabit high-speed network port and Bluetooth 5.0, communication is stable and faster, suitable for a variety of scenarios.
+
+## Key Features
+
+- **4K Video Decoding**: 4K@60fps Video decoding, supports HDMI display interface
+- **Powerful Network Communication**: 100M Ethernet, WIFI5 and Bluetooth 5.0
+- **Multiple System Support**: Android 12.0 and Ubuntu 22.04
+- **Wide Application Fields**: Set-top boxes, karaoke machines, video conferencing terminals, projectors
+- **Efficient Development**: Embedded operating system drivers with technical support
+
+## Application Areas
+
+- IoT Smart Internet of Things
+- Commercial display
+- AI artificial intelligence  
+- Industrial control
+- Medical Technology
+- Industrial Inspection
 
 ## Specifications
 
 ### Processor
 - **SoC**: Allwinner H618
-- **CPU**: [Add CPU details]
-- **GPU**: [Add GPU details]
-- **Systems Supported**: [Add supported os details]
+- **CPU**: Quad-core Cortex-A53 (up to 2.0GHz)
+- **GPU**: Mali G31 MP2
+- **Systems Supported**: Android 12.0 / Ubuntu 22.04
 
 ### Memory & Storage
-- **RAM**: [Add RAM specifications]
-- **Storage**: [Add storage options]
-- **Expandable Storage**: [Add microSD/eMMC details]
+- **Memory**: 2GB
+- **Storage**: 8GB
+- **SD-Card**: MicroSD Card Support
 
 ### Connectivity
-- **Wi-Fi**: [Add Wi-Fi specifications]
-- **Bluetooth**: [Add Bluetooth version]
-- **Ethernet**: [Add Ethernet details if available]
-- **USB**: [Add USB port specifications]
+- **WIFI/Bluetooth**: AW869A
+- **Ethernet**: 100M X1
+- **USB HOST**: USB 2.0 HOST X2
+- **USB OTG**: USB 2.0 OTG X1
 
-### I/O Interfaces
-- **GPIO**: [Add GPIO pin count and details]
-- **UART**: [Add UART specifications]
-- **SPI**: [Add SPI specifications]
-- **I2C**: [Add I2C specifications]
-- **PWM**: [Add PWM specifications]
+### Expansion Pins
+**Total 20Pin Expansion Interface:**
+- **UART**: X2
+- **SPI**: X1
+- **PWM**: X4
+- **I2C**: X4
+- **I2S**: X1
+- **SPDIF**: X1
+- **USB**: X1
+
+### Buttons & Indicators
+- **Buttons**: Recovery KEY, RESET KEY, FEL KEY
+- **LED Lights**: Power LED, Work LED
+- **Infrared Receiver**: Yes
+- **Debug Serial Port**: Yes
 
 ### Display & Audio
-- **Display Interface**: [Add display connector details]
-- **Audio**: [Add audio input/output specifications]
-- **Camera**: [Add camera interface details]
+- **HDMI Display**: X1 (up to 4K@60Hz)
 
 ### Power
-- **Power Supply**: [Add power requirements]
-- **Power Consumption**: [Add power consumption details]
-- **Battery Support**: [Add battery connector details if available]
+- **Power Supply**: Type-C 5V
+
+### Hardware interface
+![K2C](images/Hardware%20interface.png)
 
 ## Getting Started
-
 ### Prerequisites
-- [List required tools and software]
 - [Development environment setup]
 
 ### Quick Start Guide
@@ -108,7 +131,7 @@ The KickPi K2C is a development board based on the Allwinner H618 processor, des
 ## Community & Support
 
 ### Resources
-- [KickPi Official Website](https://www.kickpi.com/)
+- [KickPi K2C Product Page](https://www.kickpi.com/product/k2c/)
 
 ## Changelog
 

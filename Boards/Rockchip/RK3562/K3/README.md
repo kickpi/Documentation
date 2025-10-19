@@ -4,43 +4,77 @@
 
 ## Overview
 
-The KickPi K3 is a development board based on the Rockchip RK3562 processor, designed for IoT applications, smart home solutions, and embedded development projects.
+KICKPI-K3 is a development board based on Rockchip RK3562, the main control chip. It has a quad-core 64-bit Cortex-A53 processor, a main frequency of up to 2.0GHz, low power consumption, and high performance. The board supports multiple network communication methods, such as dual network and dual-band WIFI, with stable communication and faster speed, suitable for various scene requirements.
+
+## Key Features
+
+- **Quad-core 64-bit processor**: Cortex-A53, RK3562, 22nm technology, up to 2.0GHz
+- **Powerful network communication**: Dual network and dual-band WIFI support
+- **Video decoding and multi-screen display**: 1080P@60fps, Dual LVDS and MIPI DSI interfaces
+- **Multiple system support**: Android 13.0/Debian 11/Ubuntu 20.04
+- **Wide application fields**: Commercial tablets, video conferences, smart homes, educational electronics, medical equipment
+
+## Application Areas
+
+- IoT Smart Internet of Things
+- Commercial display
+- Industrial control
+- AI artificial intelligence
+- Medical technology
+- Industrial Inspection
 
 ## Specifications
 
 ### Processor
 - **SoC**: Rockchip RK3562
-- **CPU**: [Add CPU details]
-- **GPU**: [Add GPU details]
-- **Systems Supported**: [Add supported os details]
+- **CPU**: Quad-core ARM Cortex-A53 X4 (up to 2.0GHz)
+- **GPU**: Mali G52 2EE
+- **NPU**: RKNN 1 Tops
+- **Systems Supported**: Android 13.0 / Debian 11 / Ubuntu 20.04
 
 ### Memory & Storage
-- **RAM**: [Add RAM specifications]
-- **Storage**: [Add storage options]
-- **Expandable Storage**: [Add microSD/eMMC details]
+- **Memory**: 2G / 4G
+- **Storage**: 8G / 32G
+- **SD-Card**: MicroSD Card Support
+- **M.2 Hard Drive**: Yes
 
 ### Connectivity
-- **Wi-Fi**: [Add Wi-Fi specifications]
-- **Bluetooth**: [Add Bluetooth version]
-- **Ethernet**: [Add Ethernet details if available]
-- **USB**: [Add USB port specifications]
+- **WIFI/Bluetooth**: RTL8822CS
+- **Ethernet**: 1000M X1, 100M X1
+- **4G Mobile Network**: EC20/EC200
+- **USB HOST**: USB 2.0 HOST X2
+- **USB OTG**: USB 2.0 OTG X1
 
-### I/O Interfaces
-- **GPIO**: [Add GPIO pin count and details]
-- **UART**: [Add UART specifications]
-- **SPI**: [Add SPI specifications]
-- **I2C**: [Add I2C specifications]
-- **PWM**: [Add PWM specifications]
+### Expansion Pins
+**Total 20Pin Expansion Interface:**
+- **UART**: X3
+- **I2C**: X1
+- **USB 2.0 HOST**: X1
+- **PWM**: X1
+- **ADC**: X1
+- **GPIO**: X11
+
+### Buttons & Indicators
+- **Buttons**: Recovery KEY, RESET KEY, MASKROM KEY, POWER KEY
+- **LED Lights**: Power LED, Work LED
+- **Infrared Receiver**: Yes
+- **Real-Time Clock**: HYM8563
+- **Cooling Fan**: Yes
 
 ### Display & Audio
-- **Display Interface**: [Add display connector details]
-- **Audio**: [Add audio input/output specifications]
-- **Camera**: [Add camera interface details]
+- **MIPI DSI LCD**: X1 (up to 1920x1080@60Hz)
+- **Single LVDS LCD**: X1 (up to 1280x720@60Hz)
+- **Dual LVDS LCD**: X1 (up to 1920x1080@60Hz)
+- **MIPI CSI Camera**: 4 Lane X2 or 2 Lane X4
+- **Speaker**: Yes (Max Power 5W)
+- **Headphones**: Yes
+- **Microphone**: Yes
 
 ### Power
-- **Power Supply**: [Add power requirements]
-- **Power Consumption**: [Add power consumption details]
-- **Battery Support**: [Add battery connector details if available]
+- **Power Supply**: DC 12V
+
+### Hardware interface
+![K3](images/Hardware%20interface.png)
 
 ## Getting Started
 
@@ -108,7 +142,7 @@ The KickPi K3 is a development board based on the Rockchip RK3562 processor, des
 ## Community & Support
 
 ### Resources
-- [KickPi Official Website](https://www.kickpi.com/)
+- [KickPi K3 Product Page](https://www.kickpi.com/product/k3/)
 
 ## Changelog
 
