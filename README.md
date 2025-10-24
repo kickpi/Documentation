@@ -5,118 +5,119 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Maintainer](https://img.shields.io/badge/maintainer-MattInnovates-orange)
 
-KickPi K2B Kernel Reconstruction Project
+KickPi K2B – GPL Kernel Reconstruction Project
+
+> **“Open hardware isn’t something you’re given. It’s something you take back.”**
 
 ## ✅ Project Status: Active Reconstruction / GPL Restoration
 
-This repository documents the complete, **public reconstruction of the KickPi K2B kernel** after the vendor distributed binaries without providing corresponding GPL-compliant source code.
+This repository contains the **full reverse-engineering and reconstruction** of the KickPi K2B kernel after the vendor distributed Linux binaries without providing the corresponding GPL-complete source code.
 
-The goal of this project is not just to build a custom kernel — it is to **restore GPL transparency**, produce an openly maintained board-support package, and ensure that development for the K2B platform is no longer locked behind incomplete or hidden sources.
+This is not a hobby fork —  
+this is a **compliance restoration effort** and a transition of ownership from *vendor-controlled firmware* to a *community-maintained platform kernel.*
 
 ---
 
-## 🧠 Why This Project Exists
+## 🚩 What Happened
 
 The vendor shipped:
-- A Linux 5.4.125-based kernel
-- With custom Sunxi (Allwinner H616 / sun50iw9) hardware enablement
-- Proprietary driver blobs (WiFi/Bluetooth, GPU pipeline, etc.)
-- A full DTS-based hardware description
-- **Without** the corresponding GPL-complete source tree
+- Linux **5.4.125**
+- With a heavily customized Allwinner **sun50iw9 (H616)** BSP
+- Plus proprietary WiFi/BT/GPU integrations
+- And a full Device Tree describing the hardware
 
-This is a textbook GPL compliance gap.
+…but only released **headers**, not the real source.
 
-This repository is the community response:
-we are **reconstructing the entire BSP from live system artifacts**, mapping each vendor modification back into a clean upstream tree.
+Under GPLv2, kernel *headers are not source code.*
 
-When finished, this repo *will be the canonical, **lawfully complete** source for the KickPi K2B kernel* — something the vendor *should* have provided, but did not.
+The purpose of this repository is to reconstruct — cleanly and transparently — the **actual kernel tree behind the distributed binaries**, establishing a **lawful upstream** the vendor failed to publish.
 
 ---
 
-## 📦 Collected Assets So Far
+## ✅ Assets Already Recovered
 
-| Asset | Status |
-|------|--------|
-| Upstream kernel source (Linux 5.4.125) | ✅ |
-| Extracted running kernel config | ✅ |
-| Device Tree from live system (.dtb → .dts) | ✅ |
-| Symbol maps (System.map & kallsyms) | ✅ |
-| Proprietary firmware/mods catalogued | ✅ |
-| Cross-compilation toolchain | ✅ |
+| Asset | Source | Status |
+|------|--------|--------|
+| Upstream Linux 5.4.125 | kernel.org | ✅ |
+| Running kernel config | live K2B | ✅ |
+| Device Tree (.dtb → .dts) | live K2B | ✅ |
+| System.map + kallsyms | live K2B | ✅ |
+| Proprietary firmware list | vendor build | ✅ |
+| Toolchain | gcc-11 aarch64 | ✅ |
 
-This is enough to legally and technically reassemble a buildable, reproducible kernel — without vendor cooperation.
+This is enough to rebuild a reproducible kernel without vendor assistance.
 
 ---
 
-## 🔬 Reconstruction Approach
+## 🧠 Methodology
 
-This project uses a **binary-to-source correlation methodology**, broken down into three layers:
+This reconstruction uses a **binary-to-source delta mapping strategy**:
 
-| Layer | Origin | Purpose |
-|------|--------|----------|
-| L1 | Upstream Linux 5.4.125 | Clean GPL baseline |
-| L2 | Reverse-engineered vendor deltas | Hardware support parity |
-| L3 | AEON custom enhancements | Improvements + de-proprietarization |
+| Layer | Description |
+|------|-------------|
+| L1 | Upstream vanilla kernel (GPL baseline) |
+| L2 | Hardware enablement backported from vendor build |
+| L3 | AEON enhancements & blob replacements |
 
-Once parity is achieved, vendor blobs can be **replaced with clean drivers or upstream equivalents**, resulting in a legally sound and community-owned kernel.
+Once feature parity is reached, proprietary components are either **rewritten**, **replaced**, or isolated into clearly licensed external modules.
+
+GPL ambiguity → zeroed.
 
 ---
 
 ## 📍 Hardware Target
 
 | Property | Value |
-|---------|------|
+|---------|-------|
 | Board | KickPi K2B |
 | SoC | Allwinner H616 (sun50iw9) |
 | Architecture | ARM64 |
-| Vendor Kernel | 5.4.125 |
 | GPU | Mali G31 |
-| WiFi | AIC8800 (proprietary) |
+| WiFi/BT | AIC8800 |
+| Vendor kernel | 5.4.125 |
 
 ---
 
-## 🛠️ Current Milestone
+## 🧩 Roadmap
 
-✅ Workspace / source baseline complete
-🔄 Begin BSP layer reconstruction
-⏳ Bring-up of clean DRM vs vendor DISP2 path (decision pending)
-⏳ Proprietary binary driver replacement analysis
-
----
-
-## 📢 Intent & Licensing Posture
-
-This repository exists to **fulfill GPL obligations** that the vendor failed to meet.
-
-Once reconstruction is complete:
-
-- The board will have a *publicly maintained GPL-complete kernel*
-- Future maintenance will not depend on vendor silence
-- The K2B becomes a **first-class open platform**
-
-This is not a fork “for fun” — this is a **correction of a compliance failure** and the establishment of **real ownership** over the platform.
+| Stage | Description | Status |
+|------|-------------|--------|
+| 1 | Capture live system artifacts | ✅ |
+| 2 | Create reconstruction workspace | ✅ |
+| 3 | Import upstream tree | ✅ |
+| 4 | Begin BSP mapping | 🔄 |
+| 5 | First clean boot kernel | ⏳ |
+| 6 | Replace or isolate blobs | ⏳ |
+| 7 | Publish canonical source | ⏳ |
 
 ---
 
-## 🌐 Roadmap (High Level)
+## 📜 Licensing Intent
 
-1. ✅ Extract live kernel → capture config/DT/symbols
-2. ✅ Import upstream source → seed K2B workspace
-3. 🔄 Re-map vendor deltas → BSP layer
-4. ⏳ Initial bootable clean kernel
-5. ⏳ Replace binary components where possible
-6. ⏳ Finalize and publish canonical K2B kernel tree
+This repository is GPLv2, consistent with the Linux kernel.
 
----
+When this reconstruction is complete, **this** will become the *canonical*, publicly hosted, GPL-compliant kernel source for KickPi K2B hardware.
 
-## ⚖️ License
-
-This project is released under **GPLv2**, consistent with the Linux kernel licensing model.
+At that point:
+- The community becomes upstream.
+- Vendors become downstream.
+- Kernel development is no longer a closed loop.
 
 ---
 
-More technical breakdowns will be added as reconstruction progresses.
+## Long-Term Vision
 
-> *“Open hardware isn’t given — it’s reclaimed.”*
+✅ Permanent GPL compliance  
+✅ Reproducible builds  
+✅ Vendor-independent maintenance  
+✅ Real open platform instead of a black box  
+✅ Foundation for future Arm-based Aeon OS images
+
+> The objective is not just to *use* this board —  
+> the objective is to **own** it.
+
+---
+
+More detailed technical docs will be added as reconstruction progresses.
 
 *Last updated: October 2025*
