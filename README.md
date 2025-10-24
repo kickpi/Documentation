@@ -5,72 +5,118 @@
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Maintainer](https://img.shields.io/badge/maintainer-MattInnovates-orange)
 
-# KickPi Documentation
+KickPi K2B Kernel Reconstruction Project
 
-Welcome to the official documentation repository for **KickPi** — a leading Chinese development board customization service provider.
+## ✅ Project Status: Active Reconstruction / GPL Restoration
 
----
+This repository documents the complete, **public reconstruction of the KickPi K2B kernel** after the vendor distributed binaries without providing corresponding GPL-compliant source code.
 
-## About KickPi
-
-Founded in 2021, KickPi is focused on providing all-round development solutions for hardware and software. We specialize in tailoring high-performance development boards for customers to meet the specific needs of different industries, including:
-
-- **IoT (Internet of Things)**
-- **Smart Home Solutions**
-- **Industrial Automation**
-- **Open Source Hardware Development**
+The goal of this project is not just to build a custom kernel — it is to **restore GPL transparency**, produce an openly maintained board-support package, and ensure that development for the K2B platform is no longer locked behind incomplete or hidden sources.
 
 ---
 
-## Our Services
+## 🧠 Why This Project Exists
 
-KickPi offers comprehensive services covering the entire product development lifecycle:
+The vendor shipped:
+- A Linux 5.4.125-based kernel
+- With custom Sunxi (Allwinner H616 / sun50iw9) hardware enablement
+- Proprietary driver blobs (WiFi/Bluetooth, GPU pipeline, etc.)
+- A full DTS-based hardware description
+- **Without** the corresponding GPL-complete source tree
 
-- **Product Concept Design** – From initial idea to detailed specifications  
-- **Prototype Development** – Rapid prototyping and testing  
-- **Mass Production** – Scalable manufacturing solutions  
-- **Quality Control** – Strict quality assurance at every stage  
-- **Technical Support** – Continuous consulting and support services
+This is a textbook GPL compliance gap.
 
----
+This repository is the community response:
+we are **reconstructing the entire BSP from live system artifacts**, mapping each vendor modification back into a clean upstream tree.
 
-## Key Features
-
-### R&D Centre
-- Industry-leading research and development facilities
-- Advanced R&D equipment and testing capabilities
-- Experienced technical team with innovative consciousness
-- Customer demand-oriented, innovation-driven approach
-
-### Quality Assurance
-- High-precision testing equipment
-- Comprehensive quality management system
-- 100% precision testing of development board performance
-- Data-driven quality control processes
-
-### Professional Support
-- 7×24 hours dedicated technical support
-- 1-to-1 customer service
-- Engineer-led solutions from customer perspective
-- On-site consultation available for Shenzhen customers
+When finished, this repo *will be the canonical, **lawfully complete** source for the KickPi K2B kernel* — something the vendor *should* have provided, but did not.
 
 ---
 
-## Resources & Official Stores
+## 📦 Collected Assets So Far
 
-| Platform | Link |
+| Asset | Status |
+|------|--------|
+| Upstream kernel source (Linux 5.4.125) | ✅ |
+| Extracted running kernel config | ✅ |
+| Device Tree from live system (.dtb → .dts) | ✅ |
+| Symbol maps (System.map & kallsyms) | ✅ |
+| Proprietary firmware/mods catalogued | ✅ |
+| Cross-compilation toolchain | ✅ |
+
+This is enough to legally and technically reassemble a buildable, reproducible kernel — without vendor cooperation.
+
+---
+
+## 🔬 Reconstruction Approach
+
+This project uses a **binary-to-source correlation methodology**, broken down into three layers:
+
+| Layer | Origin | Purpose |
+|------|--------|----------|
+| L1 | Upstream Linux 5.4.125 | Clean GPL baseline |
+| L2 | Reverse-engineered vendor deltas | Hardware support parity |
+| L3 | AEON custom enhancements | Improvements + de-proprietarization |
+
+Once parity is achieved, vendor blobs can be **replaced with clean drivers or upstream equivalents**, resulting in a legally sound and community-owned kernel.
+
+---
+
+## 📍 Hardware Target
+
+| Property | Value |
 |---------|------|
-| AliExpress | https://www.aliexpress.com/store/1104787456 |
-| Amazon | https://www.amazon.com/stores/page/B337D5D4-BA62-4C89-84B5-18FC6BF81303 |
-| Taobao | https://ozfc68l6j343ysxcgk2ddg9spdv7d8o.taobao.com/ |
+| Board | KickPi K2B |
+| SoC | Allwinner H616 (sun50iw9) |
+| Architecture | ARM64 |
+| Vendor Kernel | 5.4.125 |
+| GPU | Mali G31 |
+| WiFi | AIC8800 (proprietary) |
 
 ---
 
-## Mission Statement
+## 🛠️ Current Milestone
 
-We are committed to promoting the development of smart hardware through innovative and efficient solutions, helping customers stand out in fierce market competition.  
-**Our customers' success is our success**, and we look forward to working together to create the future.
+✅ Workspace / source baseline complete
+🔄 Begin BSP layer reconstruction
+⏳ Bring-up of clean DRM vs vendor DISP2 path (decision pending)
+⏳ Proprietary binary driver replacement analysis
 
 ---
+
+## 📢 Intent & Licensing Posture
+
+This repository exists to **fulfill GPL obligations** that the vendor failed to meet.
+
+Once reconstruction is complete:
+
+- The board will have a *publicly maintained GPL-complete kernel*
+- Future maintenance will not depend on vendor silence
+- The K2B becomes a **first-class open platform**
+
+This is not a fork “for fun” — this is a **correction of a compliance failure** and the establishment of **real ownership** over the platform.
+
+---
+
+## 🌐 Roadmap (High Level)
+
+1. ✅ Extract live kernel → capture config/DT/symbols
+2. ✅ Import upstream source → seed K2B workspace
+3. 🔄 Re-map vendor deltas → BSP layer
+4. ⏳ Initial bootable clean kernel
+5. ⏳ Replace binary components where possible
+6. ⏳ Finalize and publish canonical K2B kernel tree
+
+---
+
+## ⚖️ License
+
+This project is released under **GPLv2**, consistent with the Linux kernel licensing model.
+
+---
+
+More technical breakdowns will be added as reconstruction progresses.
+
+> *“Open hardware isn’t given — it’s reclaimed.”*
 
 *Last updated: October 2025*
