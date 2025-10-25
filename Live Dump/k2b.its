@@ -1,0 +1,35 @@
+/dts-v1/;
+
+/ {
+    description = "K2B H616 kernel FIT (Image + DTB)";
+    #address-cells = <1>;
+
+    images {
+        kernel@1 {
+            description = "Linux kernel (arm64, Image)";
+            data = /incbin/("arch/arm64/boot/Image");
+            type = "kernel";
+            arch = "arm64";
+            os = "linux";
+            compression = "none";
+            load = <0x40080000>;
+            entry = <0x40080000>;
+        };
+
+        fdt@1 {
+            description = "K2B DTB (custom)";
+            data = /incbin/("sun50iw9-kickpi-k2b.custom.dtb");
+            type = "flat_dt";
+            arch = "arm64";
+            compression = "none";
+        };
+    };
+
+    configurations {
+        default = "conf@1";
+        conf@1 {
+            kernel = "kernel@1";
+            fdt    = "fdt@1";
+        };
+    };
+};
